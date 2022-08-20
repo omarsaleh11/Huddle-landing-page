@@ -1,0 +1,53 @@
+@use "../utilties" as *;
+body {
+ color: white;
+ font-size: var(--main-fs);
+ font-weight: 400;
+ font-family: var(--main-font);
+ padding: rem(35) rem(30);
+ background-color: var(--bg-body);
+ background-image: url(/images/bg-mobile.svg);
+ background-repeat: no-repeat;
+ background-position: top;
+ background-attachment: fixed;
+ @include breakpoint-up("medium") {
+  background-size: cover;
+  background-image: url(/images/bg-desktop.svg);
+ }
+}
+h1 {
+ max-width: 20ch;
+ margin-inline: auto;
+ font-size: rem(23);
+ line-height: 1.5;
+ font-weight: 600;
+ margin-bottom: rem(25);
+ letter-spacing: 1px;
+}
+
+p {
+ line-height: 1.7;
+ margin-inline: auto;
+ font-size: rem(15);
+ margin-bottom: rem(28);
+ max-width: 33ch;
+}
+.btn {
+ width: 100%;
+ a {
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  color: var(--bg-body);
+  font-size: var(--main-fs);
+  width: 65%;
+  padding: rem(15) 0;
+  border-radius: 50px;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+   background-color: var(--hover-affect);
+   color: white;
+  }
+ }
+}

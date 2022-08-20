@@ -1,0 +1,7 @@
+@use "../utilties" as *;
+.header {
+ img {
+  width: rem(125);
+ }
+ margin-bottom: rem(35);
+}

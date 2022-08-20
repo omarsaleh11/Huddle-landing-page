@@ -1,0 +1,36 @@
+@use "../utilties" as *;
+main {
+ display: grid;
+ justify-items: center;
+ height: 100%;
+}
+.grid {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: rem(38);
+ text-align: center;
+ .text {
+  font-family: var(--second-font);
+  margin-bottom: rem(21);
+ }
+ .icons {
+  text-align: center;
+  i {
+   text-align: center;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   width: rem(40);
+   height: rem(40);
+   padding-top: rem(12);
+   transition: all 0.4s ease-in-out;
+   color: white;
+   &:hover {
+    color: var(--hover-affect);
+    border-color: var(--hover-affect);
+   }
+  }
+  a:nth-child(2) {
+   margin-inline: rem(8);
+  }
+ }
+}
